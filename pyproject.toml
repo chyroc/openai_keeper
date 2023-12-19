@@ -5,13 +5,21 @@ description = "Add your description here"
 authors = [
     { name = "chyroc", email = "chyroc@qq.com" }
 ]
-dependencies = []
+dependencies = [
+    "fastui>=0.3.0",
+    "fastapi>=0.105.0",
+    "pydantic>=2.5.2",
+    "uvicorn>=0.24.0.post1",
+]
 readme = "README.md"
 requires-python = ">= 3.11,<3.12"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[project.scripts]
+startapp = "openai_keeper.app:start"
 
 [tool.rye]
 managed = true
